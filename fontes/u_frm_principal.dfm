@@ -1,8 +1,8 @@
-object Form2: TForm2
+object frm_principal: Tfrm_principal
   Left = 0
   Top = 0
-  Caption = 'Form2'
-  ClientHeight = 201
+  Caption = 'frm_principal'
+  ClientHeight = 271
   ClientWidth = 447
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

@@ -1,8 +1,8 @@
-object DataModule1: TDataModule1
+object DataModule2: TDataModule2
   OldCreateOrder = False
-  Height = 284
-  Width = 461
-  object SQL_con: TSQLConnection
+  Height = 378
+  Width = 542
+  object SQL_CON: TSQLConnection
     DriverName = 'Firebird'
     LoginPrompt = False
     Params.Strings = (
@@ -28,8 +28,8 @@ object DataModule1: TDataModule1
       'VendorLibWin64=fbclient.dll'
       'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
       
-        'Database=127.0.0.1:C:\desenvolvimento\sistema-delphi\dados\bd_si' +
-        'stema_delphi.fdb'
+        'Database=127.0.0.1:C:\desenvolvimento\sistema-delphi\dados\BD_SI' +
+        'STEMA_DELPHI.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
       'Role=RoleName'
@@ -46,7 +46,39 @@ object DataModule1: TDataModule1
       'ServerCharSet='
       'Trim Char=False')
     Connected = True
-    Left = 208
-    Top = 120
+    Left = 248
+    Top = 16
+  end
+  object DST_PROFISSOES: TSQLDataSet
+    CommandText = 'select * from TB_PROFISSOES'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQL_CON
+    Left = 216
+    Top = 88
+  end
+  object DST_CLIENTES: TSQLDataSet
+    CommandText = 'select * from TB_CLIENTES'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQL_CON
+    Left = 448
+    Top = 88
+  end
+  object DST_TIPOPRODUTO: TSQLDataSet
+    CommandText = 'select * from TB_TIPOPRODUTO'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQL_CON
+    Left = 72
+    Top = 88
+  end
+  object DST_PRODUTOS: TSQLDataSet
+    CommandText = 'select * from TB_PRODUTOS'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQL_CON
+    Left = 336
+    Top = 88
   end
 end

@@ -99,15 +99,20 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="u_frm_modelo.pas">
-            <Form>Form1</Form>
+            <Form>frm_modelo</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="u_frm_principal.pas">
-            <Form>Form2</Form>
+            <Form>frm_principal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="udm.pas">
+        <DCCReference Include="dm.pas">
+            <ModuleName>udm</ModuleName>
             <Form>DataModule1</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="dm.pas">
+            <Form>DataModule2</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
