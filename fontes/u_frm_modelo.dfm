@@ -1,7 +1,7 @@
 object frm_modelo: Tfrm_modelo
   Left = 0
   Top = 0
-  Caption = 'frm_modelo'
+  Caption = 'Formul'#225'rio modelo'
   ClientHeight = 201
   ClientWidth = 447
   Color = clBtnFace

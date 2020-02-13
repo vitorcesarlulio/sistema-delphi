@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{218AD425-27A5-4A8A-8935-1A53BAE3E629}</ProjectGuid>
+        <ProjectGuid>{66DB21ED-FF4C-454A-B19F-C635ABFE36CE}</ProjectGuid>
         <ProjectVersion>18.5</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <MainSource>sistema_delphi.dpr</MainSource>
@@ -105,16 +105,6 @@
         <DCCReference Include="u_frm_principal.pas">
             <Form>frm_principal</Form>
             <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="dm.pas">
-            <ModuleName>udm</ModuleName>
-            <Form>DataModule1</Form>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="dm.pas">
-            <Form>DataModule2</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

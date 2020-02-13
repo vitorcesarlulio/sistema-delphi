@@ -3,16 +3,10 @@ unit dm;
 interface
 
 uses
-  System.SysUtils, System.Classes, Data.DBXFirebird, Data.FMTBcd, Data.DB,
-  Data.SqlExpr;
+  System.SysUtils, System.Classes;
 
 type
-  TDataModule2 = class(TDataModule)
-    SQL_CON: TSQLConnection;
-    DST_PROFISSOES: TSQLDataSet;
-    DST_CLIENTES: TSQLDataSet;
-    DST_TIPOPRODUTO: TSQLDataSet;
-    DST_PRODUTOS: TSQLDataSet;
+  TUDM = class(TDataModule)
   private
     { Private declarations }
   public
@@ -20,7 +14,7 @@ type
   end;
 
 var
-  DataModule2: TDataModule2;
+  UDM: TUDM;
 
 implementation
 

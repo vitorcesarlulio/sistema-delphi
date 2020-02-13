@@ -1,8 +1,8 @@
 object frm_principal: Tfrm_principal
   Left = 0
   Top = 0
-  Caption = 'frm_principal'
-  ClientHeight = 271
+  Caption = 'Formul'#225'rio menu'
+  ClientHeight = 201
   ClientWidth = 447
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
