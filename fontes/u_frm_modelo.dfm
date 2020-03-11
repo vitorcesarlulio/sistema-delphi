@@ -1,44 +1,48 @@
 object frm_modelo: Tfrm_modelo
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Formul'#225'rio Padr'#227'o'
-  ClientHeight = 437
-  ClientWidth = 814
+  ClientHeight = 447
+  ClientWidth = 824
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
+  Position = poScreenCenter
   Scaled = False
+  OnClose = FormClose
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
   object pgcModelo: TPageControl
     Left = 0
     Top = 0
-    Width = 814
-    Height = 437
+    Width = 824
+    Height = 447
     ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 272
-    ExplicitTop = 144
+    ExplicitLeft = 80
+    ExplicitTop = 80
     object TabSheet1: TTabSheet
       Caption = 'Dados'
-      ExplicitLeft = 212
+      ExplicitLeft = 100
       ExplicitTop = 136
-      ExplicitWidth = 753
-      ExplicitHeight = 362
       object Panel1: TPanel
         Left = 0
-        Top = 349
-        Width = 806
+        Top = 359
+        Width = 816
         Height = 60
         Align = alBottom
         TabOrder = 0
-        ExplicitLeft = 176
-        ExplicitTop = 333
+        ExplicitTop = 349
+        ExplicitWidth = 806
         object btnNovo: TBitBtn
           Left = 0
           Top = 0
@@ -146,6 +150,7 @@ object frm_modelo: Tfrm_modelo
             C1C5DCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDF}
           Layout = blGlyphTop
           TabOrder = 0
+          OnClick = btnNovoClick
         end
         object btnSalvar: TBitBtn
           Left = 81
@@ -254,6 +259,7 @@ object frm_modelo: Tfrm_modelo
             DBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDF}
           Layout = blGlyphTop
           TabOrder = 1
+          OnClick = btnSalvarClick
         end
         object btnCancelar: TBitBtn
           Left = 162
@@ -362,6 +368,7 @@ object frm_modelo: Tfrm_modelo
             DBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDFDCDBDF}
           Layout = blGlyphTop
           TabOrder = 2
+          OnClick = btnCancelarClick
         end
         object btnApagar: TBitBtn
           Left = 244
@@ -446,6 +453,7 @@ object frm_modelo: Tfrm_modelo
             10001F0F00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
           Layout = blGlyphTop
           TabOrder = 3
+          OnClick = btnApagarClick
         end
         object btnAlterar: TBitBtn
           Left = 325
@@ -554,6 +562,7 @@ object frm_modelo: Tfrm_modelo
             DBE0DCDBE0DCDBE0DCDBE0DCDBE0DCDBE0DCDBE0DCDBE0DCDBE0}
           Layout = blGlyphTop
           TabOrder = 4
+          OnClick = btnAlterarClick
         end
         object btnImprimir: TBitBtn
           Left = 405
@@ -770,25 +779,20 @@ object frm_modelo: Tfrm_modelo
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
           Layout = blGlyphTop
           TabOrder = 6
+          OnClick = btnFecharClick
         end
       end
     end
     object TabSheet2: TTabSheet
       Caption = 'Pesquisar'
       ImageIndex = 1
-      ExplicitLeft = 396
-      ExplicitTop = 184
-      ExplicitWidth = 753
-      ExplicitHeight = 362
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 806
+        Width = 816
         Height = 53
         Align = alTop
         TabOrder = 0
-        ExplicitLeft = 72
-        ExplicitTop = 184
         object lbCodigo: TLabel
           Left = 192
           Top = 8
@@ -809,9 +813,7 @@ object frm_modelo: Tfrm_modelo
             'C'#243'digo '
             'Descri'#231#227'o')
           TabOrder = 0
-          ExplicitLeft = 120
-          ExplicitTop = 24
-          ExplicitHeight = 105
+          OnClick = rgModeloClick
         end
         object edtModelo: TEdit
           Left = 192
@@ -931,23 +933,27 @@ object frm_modelo: Tfrm_modelo
       object dbgModelo: TDBGrid
         Left = 0
         Top = 53
-        Width = 806
-        Height = 356
+        Width = 816
+        Height = 366
         Align = alClient
+        DataSource = dsDados
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        OnDblClick = dbgModeloDblClick
       end
     end
   end
-  object DBNav: TDBNavigator
-    Left = 566
-    Top = -7
-    Width = 240
-    Height = 25
+  object dbNav: TDBNavigator
+    Left = 304
+    Top = 0
+    Width = 272
+    Height = 18
+    DataSource = dsDados
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
     TabOrder = 1
   end
   object dsDados: TDataSource
